@@ -22,3 +22,10 @@ Last updated: 2026-11-25. Prototype, not a finished game. No release change in t
 ## Notes for whoever resumes
 - Pointer drag is hold-style: moving more than 25 px from the press point holds a direction until release, so the distance dragged does not map to trolley distance. That made the embedded cycle imprecise.
 - The commit history is noisy (many small web commits). The final state is correct; history was not rewritten.
+
+## Beta: proportional pointer control (experiment, not released)
+- Path: `beta/index.html` (Pages: /beta/). The only code change is in `src/main_stage2.js`: pointer drag is analog (12 px dead zone, full speed near 82 px) instead of a 25 px hold-direction.
+- Real-input QA (2026-11-25): a full cycle worked on the beta: lower cable, tap to grab, lift, carry, tap to release, HUD "Contenedor: 1".
+- Limits: needed several drags to line up with a specific piece (wind and pendulum add drift); short fast drags barely move because movement depends on how long the drag is held; the magnet picked the nearest piece, not the one aimed at. Q/E, touch devices, fun and performance not tested.
+- Decision: NOT promoted. No clear advantage over the hold-style control was shown. The release (root index.html, Pages root, itch zip) is unchanged. The beta stays as an experiment. No further control work planned without a new reason.
+- The scroll-black defect above stays open and is unrelated to this beta.
