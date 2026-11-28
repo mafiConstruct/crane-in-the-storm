@@ -36,6 +36,7 @@ reset();
 input={l:0,r:0,u:0,d:0,f:0,b:0};
 addEventListener('keydown',e=>{
  const k=e.key.toLowerCase();
+ if(k.startsWith('arrow'))e.preventDefault();
  if(k=='arrowleft'||k=='a')input.l=1;
  if(k=='arrowright'||k=='d')input.r=1;
  if(k=='arrowup'||k=='w')input.u=1;
